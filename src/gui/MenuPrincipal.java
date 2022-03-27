@@ -26,27 +26,27 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jPasswordField2 = new javax.swing.JPasswordField();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Rod", 1, 14)); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/id-card.png"))); // NOI18N
         jLabel1.setText("Usuário");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(95, 78, 45, 17);
+        jLabel1.setBounds(85, 110, 90, 16);
         getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(162, 78, 134, 20);
+        jPasswordField1.setBounds(180, 110, 134, 20);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Rod", 1, 14)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/login.png"))); // NOI18N
         jLabel2.setText("Senha");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(94, 132, 46, 17);
+        jLabel2.setBounds(116, 160, 70, 16);
 
         jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,33 +54,69 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jPasswordField2);
-        jPasswordField2.setBounds(162, 132, 134, 20);
+        jPasswordField2.setBounds(190, 160, 134, 20);
 
+        jPanel1.setBackground(new java.awt.Color(4, 30, 66));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(228, 0, 70), 10, true));
+
+        jPanel2.setBackground(new java.awt.Color(0, 163, 224));
+
+        jLabel5.setFont(new java.awt.Font("Rod", 1, 15)); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/camin2.png"))); // NOI18N
+        jLabel5.setText("Gestão de Alugueis");
+
+        jButton1.setBackground(new java.awt.Color(0, 163, 224));
+        jButton1.setFont(new java.awt.Font("Rod", 1, 18)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/sombra-de-usuario-masculino.png"))); // NOI18N
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(162, 184, 57, 23);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/bloqueio.png"))); // NOI18N
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(146, 134, 15, 16);
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(100, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(135, 135, 135)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                .addGap(136, 136, 136)
+                .addComponent(jButton1)
+                .addContainerGap())
+        );
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/sombra-de-usuario-masculino.png"))); // NOI18N
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(146, 82, 16, 16);
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
-
-        setJMenuBar(jMenuBar1);
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 400, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,11 +168,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     // End of variables declaration//GEN-END:variables
