@@ -3,7 +3,10 @@ package dao;
 
 import factory.Conexao;
 import gui.Login;
-import gui.MenuPrincipal;
+import gui.MenuAdm;
+import gui.MenuAtendente;
+import gui.MenuCliente;
+import gui.CadastroUser;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -45,16 +48,34 @@ public class UsuarioDAO {
                 try (ResultSet rs = stmt.executeQuery(query)) {
                     if (rs.next()) {
        
-                        if(query != null){
+                        String perfil = rs.getString("perfil");
+                        
+                        if("administrador".equals(perfil)){
                            JOptionPane.showMessageDialog(null,"Conectado com sucesso");
-                           MenuPrincipal menu = new MenuPrincipal();
-                           menu.setVisible(true);
-                           this.gui.dispose();
+                           MenuAdm MenuAdm = new MenuAdm();
+                           MenuAdm.setVisible(true);
+                          
                         }
         
                     }
                     
+                    
+                    if("atendente".equals(rs)){
+                        JOptionPane.showMessageDialog(null,"Conectado com sucesso");
+                        MenuAtendente menuAtendente = new MenuAtendente();
+                        menuAtendente.setVisible(true);
+                        this.gui.dispose();
+                        
+                        
+                    }
 
+                     if("cliente".equals(rs)){
+                        JOptionPane.showMessageDialog(null,"Conectado com sucesso");
+                        MenuCliente MenuCliente = new MenuCliente();
+                        MenuCliente.setVisible(true);
+                        this.gui.dispose();
+                        
+                     }
                     else {
                         JOptionPane.showMessageDialog(null,"Usuário e/ou senha incorretos.");
                         gui.getTxtUsername().setText("");
