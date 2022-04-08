@@ -58,10 +58,11 @@ public class MenuAtendente extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jPanel1.setBackground(new java.awt.Color(4, 30, 66));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(228, 0, 70), 5));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/login3.png"))); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons/IMG-20220407-WA0153 (1).jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -69,16 +70,16 @@ public class MenuAtendente extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 340, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addGap(45, 45, 45)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(83, Short.MAX_VALUE)
+                .addContainerGap(69, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
+                .addGap(57, 57, 57))
         );
 
         getContentPane().add(jPanel1);
@@ -111,7 +112,7 @@ public class MenuAtendente extends javax.swing.JFrame {
 
         jMenu2.setText("Clientes Atendidos");
 
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/verifica.png"))); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\verifica.png")); // NOI18N
         jMenuItem2.setText("Felipe ");
         jMenuItem2.setToolTipText("0");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +122,7 @@ public class MenuAtendente extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem2);
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/verifica.png"))); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\verifica.png")); // NOI18N
         jMenuItem3.setText("Beto Bolinho");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,7 +131,7 @@ public class MenuAtendente extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem3);
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/verifica.png"))); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\verifica.png")); // NOI18N
         jMenuItem4.setText("Ryan Carlos");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,11 +140,11 @@ public class MenuAtendente extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem4);
 
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/verifica.png"))); // NOI18N
+        jMenuItem5.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\verifica.png")); // NOI18N
         jMenuItem5.setText("Anderson ");
         jMenu2.add(jMenuItem5);
 
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/verifica.png"))); // NOI18N
+        jMenuItem6.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\verifica.png")); // NOI18N
         jMenuItem6.setText("Marisa ");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,7 +153,7 @@ public class MenuAtendente extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem6);
 
-        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/verifica.png"))); // NOI18N
+        jMenuItem7.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\verifica.png")); // NOI18N
         jMenuItem7.setText("David");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -161,7 +162,7 @@ public class MenuAtendente extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem7);
 
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/verifica.png"))); // NOI18N
+        jMenuItem8.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\verifica.png")); // NOI18N
         jMenuItem8.setText("William");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,7 +175,7 @@ public class MenuAtendente extends javax.swing.JFrame {
 
         jMenu4.setText("Estoque");
 
-        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/estoque em uso.png"))); // NOI18N
+        jMenuItem11.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\estoque em uso.png")); // NOI18N
         jMenuItem11.setText("Estoque em uso: 50%");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,11 +188,11 @@ public class MenuAtendente extends javax.swing.JFrame {
 
         jMenu3.setText("Formas de Pagamento");
 
-        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/amex.png"))); // NOI18N
+        jMenuItem12.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\amex.png")); // NOI18N
         jMenuItem12.setText("AMEX");
         jMenu3.add(jMenuItem12);
 
-        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/visto.png"))); // NOI18N
+        jMenuItem13.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\visto.png")); // NOI18N
         jMenuItem13.setText("VISA");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,7 +201,7 @@ public class MenuAtendente extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem13);
 
-        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/ae.png"))); // NOI18N
+        jMenuItem16.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\ae.png")); // NOI18N
         jMenuItem16.setText("American Express");
         jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,11 +210,11 @@ public class MenuAtendente extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem16);
 
-        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/diners.png"))); // NOI18N
+        jMenuItem17.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\diners.png")); // NOI18N
         jMenuItem17.setText("Diners Club");
         jMenu3.add(jMenuItem17);
 
-        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/paypal.png"))); // NOI18N
+        jMenuItem15.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\paypal.png")); // NOI18N
         jMenuItem15.setText("PayPal");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,7 +223,7 @@ public class MenuAtendente extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem15);
 
-        jMenuItem18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagem/Mastercard.png"))); // NOI18N
+        jMenuItem18.setIcon(new javax.swing.ImageIcon("D:\\Downloads\\Projeto-Clinica-Medica-main\\src\\gui\\icons\\Mastercard.png")); // NOI18N
         jMenuItem18.setText("Mastercard");
         jMenu3.add(jMenuItem18);
 
@@ -306,6 +307,7 @@ public class MenuAtendente extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MenuAtendente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

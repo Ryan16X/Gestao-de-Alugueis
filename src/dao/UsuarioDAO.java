@@ -2,20 +2,19 @@
 package dao;
 
 import factory.Conexao;
+import gui.CadastroUsuario;
 import gui.Login;
-import gui.MenuAdm;
-import gui.MenuAtendente;
-import gui.MenuCliente;
-import gui.CadastroUser;
+import gui.MenuPrincipal;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-
+import model.Usuario;
 
 public class UsuarioDAO {
     
@@ -23,76 +22,65 @@ public class UsuarioDAO {
     private int id;
     private String username;
     private String senha;
-    private final Login gui;
+    private String perfil;
+    private Login gui;
+    private CadastroUsuario cu;
     
-     public UsuarioDAO(Login gui){ 
+    
+    public UsuarioDAO(){ 
         this.connection = new Conexao().getConnection();
-        this.gui = gui;
+        
+    }
+    
+    
+    public void inserir(Usuario usuario){
+    
+        String sql = "INSERT INTO usuarios(username, senha, perfil) "
+                + "VALUES(?,?,?)";
+        
+       try{
+           PreparedStatement stmt = connection.prepareStatement(sql);
+           stmt.setString(1, usuario.getUsername());
+           stmt.setString(2, usuario.getSenha());
+           stmt.setString(3, usuario.getPerfil());
+          
+           stmt.execute();
+           stmt.close();
+           
+           
+           
+       }
+       catch(SQLException u){
+           throw  new RuntimeException(u);
+       } 
+          
     }
      
-     public void logar(){
-       
-         
-         String username = gui.getTxtUsername().getText();
-         String senha = gui.getTxtSenha().getText();
-         
-         try {
-            Class.forName("com.mysql.jdbc.Driver").newInstance();
-        try (Connection conn = (Connection) 
-                
-                DriverManager.getConnection("jdbc:mysql://localhost:3306/alugueis?useTimezone=true&serverTimezone=UTC","root","072005fi"); 
-                Statement stmt = (Statement) conn.createStatement()) {
-
-            String query = "select username from tbl_usuarios where username = '" + username +"' and senha = '" + senha + "'";
-
-                try (ResultSet rs = stmt.executeQuery(query)) {
-                    if (rs.next()) {
-       
-                        String perfil = rs.getString("perfil");
-                        
-                        if("administrador".equals(perfil)){
-                           JOptionPane.showMessageDialog(null,"Conectado com sucesso");
-                           MenuAdm MenuAdm = new MenuAdm();
-                           MenuAdm.setVisible(true);
-                          
-                        }
+    public Usuario consultar(Usuario usuario){
         
-                    }
-                    
-                    
-                    if("atendente".equals(rs)){
-                        JOptionPane.showMessageDialog(null,"Conectado com sucesso");
-                        MenuAtendente menuAtendente = new MenuAtendente();
-                        menuAtendente.setVisible(true);
-                        this.gui.dispose();
-                        
-                        
-                    }
-
-                     if("cliente".equals(rs)){
-                        JOptionPane.showMessageDialog(null,"Conectado com sucesso");
-                        MenuCliente MenuCliente = new MenuCliente();
-                        MenuCliente.setVisible(true);
-                        this.gui.dispose();
-                        
-                     }
-                    else {
-                        JOptionPane.showMessageDialog(null,"Usuário e/ou senha incorretos.");
-                        gui.getTxtUsername().setText("");
-                        gui.getTxtSenha().setText("");
-                        
-                    }   
-                }
-        
-                    //caso seja preciso mais tipos de acesso, copie e cole o código do IF para cada cargo
-
+        Usuario consulta = new Usuario();
+        String sql = "select *"
+                + "from usuarios where id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(sql);
+            stmt.setString(1,String.valueOf(usuario.getId()));
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                consulta.setUsername(rs.getString(2));
+                consulta.setSenha(rs.getString(3));
+                consulta.setPerfil(rs.getString(4));
+            
+            }
+            else{
+                consulta = null;
+            }
+            rs.close();
+            stmt.close();
+        } catch (SQLException u) {
+            throw new RuntimeException(u);
+        }
+        return(consulta);
+    }
     
-        }
-        } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
-            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        
-   }
     
 }

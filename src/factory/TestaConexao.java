@@ -9,8 +9,7 @@ public class TestaConexao {
     
      public static void main(String[] args) throws SQLException{
         
-        Connection connection;
-         connection = new Conexao().getConnection();
+        Connection connection = new Conexao().getConnection();
         System.out.println("Conexao Aberta");
         connection.close();
         
