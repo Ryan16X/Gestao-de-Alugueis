@@ -55,17 +55,11 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem12">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\amex.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="AMEX"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem13">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\visto.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="VISA"/>
               </Properties>
               <Events>
@@ -74,9 +68,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem16">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\ae.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="American Express"/>
               </Properties>
               <Events>
@@ -85,17 +76,11 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem17">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\diners.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Diners Club"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem15">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\paypal.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="PayPal"/>
               </Properties>
               <Events>
@@ -104,9 +89,6 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem18">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\Mastercard.png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Mastercard"/>
               </Properties>
             </MenuItem>
@@ -119,17 +101,11 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem7">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\estrela (1).png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Uma Estrela"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\estrela (1).png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Duas Estrelas"/>
               </Properties>
               <Events>
@@ -138,25 +114,16 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\estrela (1).png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Tr&#xea;s Estrelas"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\estrela (1).png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Quatro Estrelas"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem6">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\Downloads\Projeto-Clinica-Medica-main\src\gui\icons\estrela (1).png"/>
-                </Property>
                 <Property name="text" type="java.lang.String" value="Cinco Estrelas"/>
               </Properties>
             </MenuItem>
@@ -215,14 +182,17 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" red="0" type="rgb"/>
+          <Color blue="3d" green="28" red="18" type="rgb"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
             <LineBorder thickness="5">
-              <Color PropertyName="color" blue="46" green="0" red="e4" type="rgb"/>
+              <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
             </LineBorder>
           </Border>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="3d" green="28" red="18" type="rgb"/>
         </Property>
       </Properties>
 
@@ -230,18 +200,18 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" pref="398" max="-2" attributes="0"/>
-                  <EmptySpace pref="51" max="32767" attributes="0"/>
+                  <EmptySpace pref="82" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace pref="69" max="32767" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="244" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="266" max="-2" attributes="0"/>
+                  <EmptySpace pref="66" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -250,7 +220,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/gui/icons/IMG-20220407-WA0153 (1).jpg"/>
+              <Image iconType="3" name="/gui/icons/IMG_3337.PNG"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>

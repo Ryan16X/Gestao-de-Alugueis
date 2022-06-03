@@ -43,7 +43,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
     public void PopularJTable(String sql) {
           try
           {
-           Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/gestão?useTimezone=true"+"&serverTimezone=UTC","root","123456789");
+           Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/gestão?useTimezone=true"+"&serverTimezone=UTC","root","12345");
            PreparedStatement banco = (PreparedStatement)conn.prepareStatement(sql);
            banco.execute(); // cria o vetor
 
@@ -132,9 +132,10 @@ public class CadastroUsuario extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons/IMG-20220407-WA0153.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons/IMG_PRETA100.png"))); // NOI18N
         jLabel3.setText("Registro de Usuários");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -166,7 +167,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 120));
 
-        jPanel2.setBackground(new java.awt.Color(108, 3, 3));
+        jPanel2.setBackground(new java.awt.Color(24, 40, 61));
         jPanel2.setToolTipText("Brotherhood");
 
         jLabel1.setBackground(new java.awt.Color(31, 81, 123));
@@ -282,7 +283,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons/shipping-g4b1be7211_640.png"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/icons/IMG_3337.PNG"))); // NOI18N
 
         jUsuarios.setAutoCreateRowSorter(true);
         jUsuarios.setModel(new javax.swing.table.DefaultTableModel(
@@ -326,7 +327,6 @@ public class CadastroUsuario extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Formula1 Display-Bold", 0, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Brotherhood ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -383,13 +383,13 @@ public class CadastroUsuario extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(29, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -584,7 +584,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 Class.forName("com.mysql.jdbc.Driver");
                 //Abrindo a conexão
                 Connection conn =
-                DriverManager.getConnection("jdbc:mysql://localhost/gestão?useTimezone=true"+"&serverTimezone=UTC","root","123456789");
+                DriverManager.getConnection("jdbc:mysql://localhost/gestão?useTimezone=true"+"&serverTimezone=UTC","root","12345");
                 //Executa a query de exclusão
                 java.sql.Statement st = conn.createStatement();
                 st.executeUpdate("DELETE FROM usuarios WHERE id='" + this.txtId.getText() + "'");
@@ -611,7 +611,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
                 //Registra JDBC driver
                 Class.forName("com.mysql.jdbc.Driver");
                 //Abrindo a conexão
-                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/gestão?useTimezone=true"+"&serverTimezone=UTC","root","123456789");
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/gestão?useTimezone=true"+"&serverTimezone=UTC","root","12345");
                 //Executa a query de atualização
                 java.sql.Statement st = conn.createStatement();
                 st.executeUpdate("UPDATE usuarios SET username='"
@@ -658,7 +658,7 @@ public class CadastroUsuario extends javax.swing.JFrame {
         
         try {
             
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/gestão?useTimezone=true"+"&serverTimezone=UTC","root","123456789");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/gestão?useTimezone=true"+"&serverTimezone=UTC","root","12345");
             PreparedStatement pstm;
             ResultSet rs;
             pstm = conn.prepareStatement("select*from usuarios");

@@ -6,6 +6,7 @@ import gui.CadastroUsuario;
 import gui.Login;
 import gui.MenuAtendente;
 import gui.MenuCliente;
+import gui.MenuEntregador;
 import gui.MenuPrincipal;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -50,7 +51,7 @@ public class LoginDAO {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
         try (Connection conn = (Connection) 
                 
-                DriverManager.getConnection("jdbc:mysql://localhost:3306/gestão?useTimezone=true&serverTimezone=UTC","root","123456789"); 
+                DriverManager.getConnection("jdbc:mysql://localhost:3306/gestão?useTimezone=true&serverTimezone=UTC","root","12345"); 
                 Statement stmt = (Statement) conn.createStatement()) {
 
             String query = "select * from usuarios where username = '" + username +"' and senha = '" + senha + "'";
@@ -97,7 +98,7 @@ public class LoginDAO {
                         
                         else if("Entregador".equals(perfil)){
                            JOptionPane.showMessageDialog(null,"Conectado com sucesso! Seja Bem-Vindo!");
-                           MenuPrincipal med = new MenuPrincipal();
+                           MenuEntregador med = new MenuEntregador();
                            med.setVisible(true);
                            this.gui.dispose();
                         }
